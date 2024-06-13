@@ -91,7 +91,9 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
+.resume,
 .button {
   font-size: 16px;
   color: var(--white);
@@ -106,8 +108,34 @@ html {
   transition: all 0.3s ease;
   text-align: center;
 }
+.resume::after {
+  content: "\23F7";
+  font-size: 26px;
+  font-weight: 800;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: var(--white);
+}
+.resume:focus,
+.resume:hover,
+.resume.active {
+  color: transparent;
+  box-shadow: rgba(150, 150, 193, 0.25) 0px 30px 60px -12px inset,
+    rgba(255, 255, 255, 0.1) 0px 18px 36px -18px inset;
+  border-color: var(--color-main);
+}
+.resume:focus::after,
+.resume:hover::after,
+.resume.active::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
 .button::after {
-  content: "\2935";
+  content: "\2BAF";
   font-size: 26px;
   font-weight: 800;
   position: absolute;
@@ -234,8 +262,8 @@ html {
   padding: 10px;
   background-image: linear-gradient(
     161.15deg,
-    #c569cf3e 12.73%,
-    #ee609b28 72.95%
+    #3e0a433e 12.73%,
+    #0e137128 72.95%
   );
   border: 1px solid rgba(255, 255, 255, 0.155);
   overflow: hidden;
