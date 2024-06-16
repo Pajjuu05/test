@@ -1,1 +1,1 @@
-prajwaldeshpande.github.io
+https://deshpandeprajwal.github.io/
